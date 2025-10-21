@@ -1,0 +1,19 @@
+{
+  "name": "@cherry/ds",
+  "version": "0.1.0-alpha",
+  "description": "Design system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherry-picked-solutions/tt-design-system.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/cherry-picked-solutions/tt-design-system/issues"
+  },
+  "homepage": "https://github.com/cherry-picked-solutions/tt-design-system#readme"
+}
