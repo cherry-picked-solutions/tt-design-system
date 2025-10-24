@@ -1,0 +1,47 @@
+:root {
+  /* Fonts */
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-primary: var(--font-sans);
+  --font-size-base: 1.125rem; /* 18px */
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-xxl: 128px;
+
+  /**
+  * Colors
+  *
+  * Initial color palette based on Cherry Picked logo, #EA3354
+  * https://venngage.com/tools/accessible-color-palette-generator
+  *
+  * purple: #9b2bf1
+  * pink: #e22dd6
+  * red: #ea3354
+  * orange: #f97436
+  * yellow: #f9ca00
+  *
+  * Created shades based on this:
+  * https://maketintsandshades.com/
+  *
+  **/
+  --color-neutral-lightest: #fbfafa;
+  --color-neutral-lighter: #f1f0f0;
+  --color-neutral-light: #e8e6e6;
+  --color-neutral: #dedcdc;
+  --color-neutral-dark: #858484;
+  --color-neutral-darker: #595858;
+  --color-neutral-darkest: #2c2c2c;
+  --color-ink: var(--color-neutral-darkest);
+}
+
+body {
+  font-size: var(--font-size-base);
+  font-family: var(--font-primary);
+}

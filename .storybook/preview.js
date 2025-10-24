@@ -1,3 +1,6 @@
+// We'll have to import the global stylesheet in downstream projects
+import "../src/assets/styles/global/index.css";
+
 /** @type { import('@storybook/web-components-vite').Preview } */
 const preview = {
   parameters: {
