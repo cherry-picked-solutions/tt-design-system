@@ -17,6 +17,13 @@ const preview = {
       // 'off' - skip a11y checks entirely
       test: "todo",
     },
+    docs: {
+      toc: true, // Autogenerate table of contents.
+      // Show source code by default.
+      canvas: {
+        sourceState: "shown",
+      },
+    },
   },
 };
 
