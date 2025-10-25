@@ -7,7 +7,11 @@ export default {
   tags: ["autodocs"],
   component: "cherry-button",
   render: (args) =>
-    html`<cherry-button variant=${args.variant || nothing}>
+    html` <cherry-button
+      variant=${args.variant || nothing}
+      size=${args.size || nothing}
+      type=${args.type || nothing}
+    >
       ${args.label}
     </cherry-button>`,
   argTypes: {
@@ -18,6 +22,9 @@ export default {
   },
   args: {
     label: "Button",
+    variant: "",
+    type: "",
+    size: "",
   },
 };
 
@@ -28,7 +35,11 @@ export const Primary = {
   },
 };
 
-export const Secondary = {};
+export const Secondary = {
+  args: {
+    variant: "secondary",
+  },
+};
 
 export const Large = {
   args: {
