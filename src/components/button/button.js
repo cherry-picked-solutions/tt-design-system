@@ -2,7 +2,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { LitElement, css, html } from "lit";
 
 /**
- * @tag cherry-button
+ * @tag tt-button
  * @summary A custom button element.
  *
  * @property {string} variant - The visual style variant of the button. Can be "primary" or "secondary".
@@ -10,58 +10,58 @@ import { LitElement, css, html } from "lit";
  * @property {'reset' | 'button' | 'submit'} type - The type of the button. Defaults to 'button'.
  * @attr {'reset' | 'button' | 'submit'} type - The type of the button. Defaults to 'button'.
  *
- * @cssProp --cherry-button-background=var(--color-neutral-darkest) - Background color of the button.
- * @cssProp --cherry-button-background-active=var(--color-neutral-darker) - Background color of the button on hover/focus.
- * @cssProp --cherry-button-text=var(--color-neutral-lightest) - Text color of the button.
- * @cssProp --cherry-button-padding-x=var(--space-sm) - Horizontal padding of the button.
- * @cssProp --cherry-button-padding-y=var(--space-xs) - Vertical padding of the button.
- * @cssProp --cherry-button-radius=var(--space-xxs) - Border radius of the button.
+ * @cssProp --tt-button-background=var(--color-neutral-darkest) - Background color of the button.
+ * @cssProp --tt-button-background-active=var(--color-neutral-darker) - Background color of the button on hover/focus.
+ * @cssProp --tt-button-text=var(--color-neutral-lightest) - Text color of the button.
+ * @cssProp --tt-button-padding-x=var(--space-sm) - Horizontal padding of the button.
+ * @cssProp --tt-button-padding-y=var(--space-xs) - Vertical padding of the button.
+ * @cssProp --tt-button-radius=var(--space-xxs) - Border radius of the button.
  */
-export class CherryButton extends LitElement {
+export class TTButton extends LitElement {
   static styles = css`
     :host {
-      --cherry-button-background: var(--color-neutral-darkest);
-      --cherry-button-background-active: var(--color-neutral-darker);
-      --cherry-button-text: var(--color-neutral-lightest);
-      --cherry-button-padding-x: var(--space-sm);
-      --cherry-button-padding-y: var(--space-xs);
-      --cherry-button-radius: var(--space-xxs);
+      --tt-button-background: var(--color-neutral-darkest);
+      --tt-button-background-active: var(--color-neutral-darker);
+      --tt-button-text: var(--color-neutral-lightest);
+      --tt-button-padding-x: var(--space-sm);
+      --tt-button-padding-y: var(--space-xs);
+      --tt-button-radius: var(--space-xxs);
       display: inline-flex;
       width: auto;
     }
 
     button {
-      background-color: var(--cherry-button-background);
+      background-color: var(--tt-button-background);
       border: none; /* @TODO Create setting */
-      border-radius: var(--cherry-button-radius);
-      color: var(--cherry-button-text);
+      border-radius: var(--tt-button-radius);
+      color: var(--tt-button-text);
       cursor: pointer;
-      padding-block: var(--cherry-button-padding-y);
-      padding-inline: var(--cherry-button-padding-x);
+      padding-block: var(--tt-button-padding-y);
+      padding-inline: var(--tt-button-padding-x);
 
       &:hover {
-        background-color: var(--cherry-button-background-active);
+        background-color: var(--tt-button-background-active);
       }
     }
 
-    .cherry-button--secondary {
-      --cherry-button-background: var(--color-neutral-dark);
+    .tt-button--secondary {
+      --tt-button-background: var(--color-neutral-dark);
 
       &:is(:hover, :focus) {
-        --cherry-button-background-active: var(--color-neutral);
+        --tt-button-background-active: var(--color-neutral);
       }
     }
 
-    .cherry-button--lg {
+    .tt-button--lg {
       font-size: calc(var(--font-size-base) * 2.5%);
-      padding-block: calc(var(--cherry-button-padding-y) * 2);
-      padding-inline: calc(var(--cherry-button-padding-x) * 2);
+      padding-block: calc(var(--tt-button-padding-y) * 2);
+      padding-inline: calc(var(--tt-button-padding-x) * 2);
     }
 
-    .cherry-button--sm {
+    .tt-button--sm {
       font-size: calc(var(--font-size-base) * 0.75);
-      padding-block: var(--cherry-button-padding-y);
-      padding-inline: var(--cherry-button-padding-x);
+      padding-block: var(--tt-button-padding-y);
+      padding-inline: var(--tt-button-padding-x);
     }
   `;
 
@@ -85,7 +85,7 @@ export class CherryButton extends LitElement {
       this._type = value;
     } else {
       console.warn(
-        `Invalid type "${value}" for cherry-button. Defaulting to "button".`,
+        `Invalid type "${value}" for tt-button. Defaulting to "button".`,
       );
       // Default to "button" if invalid.
       this._type = "button";
@@ -103,10 +103,10 @@ export class CherryButton extends LitElement {
       <button
         type=${this.type}
         class=${classMap({
-          "cherry-button--primary": this.variant === "primary",
-          "cherry-button--secondary": this.variant === "secondary",
-          "cherry-button--sm": this.size === "small",
-          "cherry-button--lg": this.size === "large",
+          "tt-button--primary": this.variant === "primary",
+          "tt-button--secondary": this.variant === "secondary",
+          "tt-button--sm": this.size === "small",
+          "tt-button--lg": this.size === "large",
         })}
       >
         <slot></slot>
@@ -115,4 +115,4 @@ export class CherryButton extends LitElement {
   }
 }
 
-customElements.define("cherry-button", CherryButton);
+customElements.define("tt-button", TTButton);

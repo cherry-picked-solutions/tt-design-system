@@ -5,15 +5,15 @@ import "./button";
 export default {
   title: "Example/Button",
   tags: ["autodocs"],
-  component: "cherry-button",
+  component: "tt-button",
   render: (args) =>
-    html` <cherry-button
+    html` <tt-button
       variant=${args.variant || nothing}
       size=${args.size || nothing}
       type=${args.type || nothing}
     >
       ${args.label}
-    </cherry-button>`,
+    </tt-button>`,
   argTypes: {
     size: {
       control: { type: "select" },
