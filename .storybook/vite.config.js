@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
         {
-          src: 'src/assets/styles/global.css',
-          dest: 'assets/styles',
+          src: "src/assets/styles/global.css",
+          dest: "assets/styles",
         },
       ],
     }),
