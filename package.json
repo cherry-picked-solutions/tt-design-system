@@ -2,6 +2,7 @@
   "name": "@cherry/ds",
   "version": "0.1.0-alpha",
   "description": "Design system",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "lint": "npx eslint",
