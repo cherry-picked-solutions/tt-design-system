@@ -6,13 +6,10 @@ export default {
   title: "Example/Header",
   tags: ["autodocs"],
   component: "tt-header",
-  render: (args) =>
-    html`<tt-header variant=${args.variant || nothing}>
-      ${args.label}
-    </tt-header>`,
+  render: (args) => html`<tt-header> ${args.label} </tt-header>`,
   args: {
-    label: "Component Label",
     variant: "",
+    label: "Frog",
   },
 };
 
