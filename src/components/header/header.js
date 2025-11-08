@@ -1,12 +1,6 @@
 import { LitElement, css, html } from "lit";
 
 export class TTHeader extends LitElement {
-  static properties = {
-    title: { type: String },
-    logo: { type: String },
-    primaryNav: { type: Array },
-  };
-
   static styles = css`
     :host {
       container-type: inline-size;
