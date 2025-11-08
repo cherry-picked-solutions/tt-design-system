@@ -22,10 +22,14 @@ export class TTHeader extends LitElement {
         grid-template-columns: repeat(3, 1fr);
         column-gap: var(--space-md);
       }
-    }
 
-    .tt-header__center {
-      outline: 1px solid blue;
+      .tt-header__center {
+        justify-self: center;
+      }
+
+      .tt-header__end {
+        justify-self: end;
+      }
     }
   `;
 
