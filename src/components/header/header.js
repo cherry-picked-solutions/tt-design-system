@@ -8,8 +8,7 @@ export class TTHeader extends LitElement {
       display: block;
     }
 
-    /* @container (min-width: 768px) { */
-    @container (min-width: 500px) {
+    @container (min-width: 768px) {
       .tt-header {
         display: grid;
         align-items: center;
