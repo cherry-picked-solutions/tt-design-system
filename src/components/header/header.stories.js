@@ -1,4 +1,5 @@
 import { html, nothing } from "lit";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import "./header";
 import "../button/button";
 
@@ -8,34 +9,47 @@ export default {
   tags: ["autodocs"],
   component: "tt-header",
   render: (args) =>
-    html`<tt-header>
+    html`<tt-header container-max-width=${args.containerMaxWidth || nothing}>
       <div slot="start">
-        <h1>Hello world</h1>
+        ${args.slotStart
+          ? html`${unsafeHTML(args.slotStart)}`
+          : html`<h1>Hello world</h1>`}
       </div>
       <nav slot="center">
-        <ul className="nav">
-          <li>
-            <a href="#">Nav item 1</a>
-          </li>
-          <li>
-            <a href="#">Nav item 2</a>
-          </li>
-          <li>
-            <a href="#">Nav item 3</a>
-          </li>
-          <li>
-            <a href="#">Nav item 4</a>
-          </li>
-        </ul>
+        ${args.slotCenter
+          ? html`${unsafeHTML(args.slotCenter)}`
+          : html`<ul class="nav">
+              <li>
+                <a href="#">Nav item 1</a>
+              </li>
+              <li>
+                <a href="#">Nav item 2</a>
+              </li>
+              <li>
+                <a href="#">Nav item 3</a>
+              </li>
+              <li>
+                <a href="#">Nav item 4</a>
+              </li>
+            </ul>`}
       </nav>
       <div slot="end">
-        <tt-button>Contact Us</tt-button>
+        ${args.slotEnd
+          ? html`${unsafeHTML(args.slotEnd)}`
+          : html`<tt-button>Contact Us</tt-button>`}
       </div>
     </tt-header>`,
   args: {
-    variant: "",
-    label: "Frog",
+    containerMaxWidth: null,
+    slotStart: null,
   },
 };
 
 export const Default = {};
+
+export const Constrained = {
+  args: {
+    containerMaxWidth: 1000,
+    slotStart: "<h1>Constrained width</h1>",
+  },
+};
