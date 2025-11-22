@@ -10,7 +10,6 @@ const preview = {
         date: /Date$/i,
       },
     },
-
     a11y: {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
@@ -18,6 +17,7 @@ const preview = {
       test: "todo",
     },
     docs: {
+      autodocs: true,
       toc: true, // Autogenerate table of contents.
       // Show source code by default.
       canvas: {
@@ -25,6 +25,7 @@ const preview = {
       },
     },
   },
+  tags: ["autodocs"],
 };
 
 export default preview;

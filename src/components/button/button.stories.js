@@ -3,8 +3,7 @@ import "./button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: "Example/Button",
-  tags: ["autodocs"],
+  title: "Components/Button",
   component: "tt-button",
   render: (args) =>
     html` <tt-button
