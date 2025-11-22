@@ -1,6 +1,7 @@
 import { html, nothing } from "lit";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import "./header";
+import "../menu/menu";
 import "../button/button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
@@ -14,7 +15,7 @@ export default {
           ? html`${unsafeHTML(args.slotStart)}`
           : html`<h1>Hello world</h1>`}
       </div>
-      <nav slot="center">
+      <tt-menu slot="center">
         ${args.slotCenter
           ? html`${unsafeHTML(args.slotCenter)}`
           : html`<ul class="nav">
@@ -31,7 +32,7 @@ export default {
                 <a href="#">Nav item 4</a>
               </li>
             </ul>`}
-      </nav>
+      </tt-menu>
       <div slot="end">
         ${args.slotEnd
           ? html`${unsafeHTML(args.slotEnd)}`
