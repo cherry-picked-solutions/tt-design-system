@@ -17,7 +17,6 @@ const preview = {
       test: "todo",
     },
     docs: {
-      autodocs: true,
       toc: true, // Autogenerate table of contents.
       // Show source code by default.
       canvas: {
