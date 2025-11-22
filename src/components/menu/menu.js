@@ -8,15 +8,44 @@ import { LitElement, css, html } from "lit";
 
 export class TTMenu extends LitElement {
   static properties = {
-    layout: { type: String, reflect: true },
+    _menuItems: { state: true },
   };
+
 
   constructor() {
     super();
+    this._menuItems = [];
   }
 
+  get _slottedChildren() {
+    const slot = this.shadowRoot.querySelector("slot");
+
+    if (!slot) return [];
+
+    return slot.assignedElements({ flatten: true });
+  }
+
+  handleSlotChange = (e) => {
+    const childNodes = e.target.assignedElements({ flatten: true });
+
+    if (childNodes.length) {
+      this._menuItems = childNodes;
+    }
+  };
+
   render() {
-    return html`<nav><slot></slot></nav>`;
+    return html` <nav
+      class="tt-menu ${classMap(classes)}"
+    >
+      <ul>
+        ${this._menuItems.map(
+          (_menuItem, index) =>
+            html`<li data-index="${index}">${_menuItem}</li>`,
+        )}
+      </ul>
+
+      <slot @slotchange=${this.handleSlotChange}></slot>
+    </nav>`;
   }
 }
 
