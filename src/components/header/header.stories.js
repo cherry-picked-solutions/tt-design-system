@@ -5,8 +5,7 @@ import "../button/button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: "Example/Header",
-  tags: ["autodocs"],
+  title: "Components/Header",
   component: "tt-header",
   render: (args) =>
     html`<tt-header container-max-width=${args.containerMaxWidth || nothing}>
