@@ -1,4 +1,5 @@
 import { LitElement, css, html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 
 /**
  * @tag tt-menu
@@ -9,8 +10,26 @@ import { LitElement, css, html } from "lit";
 export class TTMenu extends LitElement {
   static properties = {
     _menuItems: { state: true },
+    inline: { type: Boolean, reflect: true },
   };
 
+  static styles = css`
+    :host {
+      container-type: inline-size;
+      container-name: menu;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+      padding-inline-start: 0;
+    }
+
+    .tt-menu--inline ul {
+      display: flex;
+      gap: 1rem; // @TODO: Create setting.
+    }
+  `;
 
   constructor() {
     super();
@@ -34,8 +53,11 @@ export class TTMenu extends LitElement {
   };
 
   render() {
+    const classes = { "tt-menu--inline": this.inline };
+
     return html` <nav
       class="tt-menu ${classMap(classes)}"
+      inline=${this.inline}
     >
       <ul>
         ${this._menuItems.map(
