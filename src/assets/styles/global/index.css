@@ -31,6 +31,8 @@
   * https://maketintsandshades.com/
   *
   **/
+
+  /* @TODO: Use OKLab colors. */
   --color-neutral-lightest: #fbfafa;
   --color-neutral-lighter: #f1f0f0;
   --color-neutral-light: #e8e6e6;
