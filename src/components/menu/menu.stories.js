@@ -6,7 +6,7 @@ export default {
   title: "Components/Menu",
   component: "tt-menu",
   render: (args) =>
-    html`<tt-menu>
+    html`<tt-menu ?inline=${args.inline}>
       <tt-menu-item href="javascript:void(0)">Menu item 1</tt-menu-item>
       <tt-menu-item href="javascript:void(0)">Menu item 2</tt-menu-item>
       <tt-menu-item href="javascript:void(0)">Menu item 3</tt-menu-item>
@@ -16,3 +16,9 @@ export default {
 };
 
 export const Default = {};
+
+export const Inline = {
+  args: {
+    inline: true,
+  },
+};
