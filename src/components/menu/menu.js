@@ -15,19 +15,36 @@ export class TTMenu extends LitElement {
 
   static styles = css`
     :host {
+      --tt-menu-gap: var(--space-md);
+      --tt-menu-color: var(--link-text-color);
+      --tt-menu-color-active: var(--link-text-color-active);
+
       container-type: inline-size;
       container-name: menu;
+      display: block;
     }
 
     ul,
     ol {
+      display: flex;
+      flex-direction: column;
       list-style: none;
+      gap: var(--tt-menu-gap);
       padding-inline-start: 0;
+      margin-block: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:is(:hover, :active, :focus) {
+        color: var(--tt-menu-color-active);
+      }
     }
 
     .tt-menu--inline ul {
-      display: flex;
-      gap: 1rem; // @TODO: Create setting.
+      flex-direction: row;
     }
   `;
 

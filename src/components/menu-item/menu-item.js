@@ -13,10 +13,20 @@ export class TTMenuItem extends LitElement {
 
   static styles = css`
     :host {
+      --tt-menu-item-color: var(--tt-menu-color, var(--link-text-color));
+      --tt-menu-item-color-active: var(
+        --tt-menu-color-active,
+        var(--link-text-color-active)
+      );
     }
 
     a {
       color: inherit;
+      text-decoration: none;
+
+      :is(:hover, :active, :focus) {
+        color: var(--tt-menu-item-color-active);
+      }
     }
   `;
 
