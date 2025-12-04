@@ -19,8 +19,6 @@ export class TTMenu extends LitElement {
       --tt-menu-color: var(--link-text-color);
       --tt-menu-color-active: var(--link-text-color-active);
 
-      container-type: inline-size;
-      container-name: menu;
       display: block;
     }
 
@@ -43,8 +41,10 @@ export class TTMenu extends LitElement {
       }
     }
 
-    .tt-menu--inline ul {
-      flex-direction: row;
+    @media screen and (min-width: 768px) {
+      .tt-menu--inline ul {
+        flex-direction: row;
+      }
     }
   `;
 

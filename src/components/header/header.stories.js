@@ -15,24 +15,18 @@ export default {
           ? html`${unsafeHTML(args.slotStart)}`
           : html`<h1>Hello world</h1>`}
       </div>
-      <tt-menu slot="center">
-        ${args.slotCenter
-          ? html`${unsafeHTML(args.slotCenter)}`
-          : html`<ul class="nav">
-              <li>
-                <a href="#">Nav item 1</a>
-              </li>
-              <li>
-                <a href="#">Nav item 2</a>
-              </li>
-              <li>
-                <a href="#">Nav item 3</a>
-              </li>
-              <li>
-                <a href="#">Nav item 4</a>
-              </li>
-            </ul>`}
-      </tt-menu>
+      <div slot="center">
+        <tt-menu inline>
+          ${args.slotCenter
+            ? html`${unsafeHTML(args.slotCenter)}`
+            : html`
+                <tt-menu-item href="javascript:void(0)">Docs</tt-menu-item>
+                <tt-menu-item href="javascript:void(0)">About</tt-menu-item>
+                <tt-menu-item href="javascript:void(0)">Contact</tt-menu-item>
+                <tt-menu-item href="javascript:void(0)">Blog</tt-menu-item>
+              `}
+        </tt-menu>
+      </div>
       <div slot="end">
         ${args.slotEnd
           ? html`${unsafeHTML(args.slotEnd)}`
