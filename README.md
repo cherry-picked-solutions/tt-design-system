@@ -1,5 +1,9 @@
 A design system built with [Lit](https://lit.dev/) web components.
 
+## Accessibility
+
+Our a11y baseline is WCAG 2.2 AA.
+
 ## Getting Started
 
 This project uses [Storybook](https://storybook.js.org/) for component development, documentation, and testing.
@@ -11,11 +15,6 @@ tt-design-system/
 │   ├── assets/               # Static assets (images, fonts, etc). Includes global design token CSS.
 └── └── components/           # UI components with stories.
 ```
-
-### Accessibility
-
-Our a11y baseline is WCAG 2.2 AA.
-
 
 ### Installation
 
@@ -49,3 +48,22 @@ npm run build-storybook
 ## Components
 
 You can find components in `src/components`. Use JSDoc style comments for clear documentation, include CSSProps for theme settings.
+
+### Styling components
+
+Some basic rules to keep in mind when styling components.
+
+1. **Define settings in `:host()`:** Defining CSS vars in `:host()` makes it easy for to theme components without writing CSS overrides.
+1. **Let settings cascade:** Set high-level tokens and allow them to flow down to specific parts.
+   For example:
+
+   ```mermaid
+   flowchart LR
+      A[--color-neutral-darkest] --> B[--link-text-color]
+      B --> C[--tt-menu-color]
+      C --> D[--tt-menu-item-color]
+   ```
+
+   - Each component is independent and themable.
+   - Works out of the box: Users don't have to modify anything because it comes with good defaults.
+   - Auto updates: Changing global colors automatically updates the deepest leaf.

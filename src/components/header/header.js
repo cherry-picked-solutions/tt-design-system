@@ -10,6 +10,7 @@ import { LitElement, css, html } from "lit";
  * @cssProp --tt-header-padding-x - The header's horizontal padding.
  * @cssProp --tt-header-padding-y - The header's vertical padding.
  * @cssProp --tt-header-column-gap - The spacing between columns.
+ * @cssProp --tt-header-border - The bottom border width, style, and color.
  *
  * @slot start - The first column.
  * @slot center - The middle column.
@@ -25,35 +26,46 @@ export class TTHeader extends LitElement {
 
   static styles = css`
     :host {
+      --tt-header-background: none;
+      --tt-header-padding-x: 0;
+      --tt-header-padding-y: 0;
+      --tt-header-column-gap: var(--space-md);
+      --tt-header-border: 1px solid var(--color-neutral);
+
+      border-bottom: var(--tt-header-border);
       container-type: inline-size;
       container-name: header;
       display: block;
     }
 
     .tt-header__inner {
+      display: grid;
       max-width: var(--container-max-width);
       margin-inline: auto;
+      gap: var(--tt-header-column-gap);
     }
 
     .tt-header {
-      background-color: var(--tt-header-background, none);
-      padding: var(--tt-header-padding-y, 0) var(--tt-header-padding-x, 0);
+      background-color: var(--tt-header-background);
+      padding: var(--tt-header-padding-y) var(--tt-header-padding-x);
     }
 
     @container (min-width: 768px) {
       .tt-header__inner {
-        display: grid;
         align-items: center;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: var(--tt-header-column-gap, var(--space-md));
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: "start center end"; // @TODO: Flip this for RTL.
+        column-gap: var(--tt-header-column-gap);
       }
 
       .tt-header__center {
         justify-self: center;
+        grid-area: center;
       }
 
       .tt-header__end {
         justify-self: end;
+        grid-area: end;
       }
     }
   `;

@@ -31,6 +31,8 @@
   * https://maketintsandshades.com/
   *
   **/
+
+  /* @TODO: Use OKLab colors. */
   --color-neutral-lightest: #fbfafa;
   --color-neutral-lighter: #f1f0f0;
   --color-neutral-light: #e8e6e6;
@@ -38,7 +40,12 @@
   --color-neutral-dark: #858484;
   --color-neutral-darker: #595858;
   --color-neutral-darkest: #2c2c2c;
+
   --color-ink: var(--color-neutral-darkest);
+
+  /* Link colors */
+  --link-text-color: var(--color-neutral-darkest);
+  --link-text-color-active: var(--color-neutral-dark);
 }
 
 body {
@@ -47,5 +54,9 @@ body {
 }
 
 a {
-  color: var(--color-neutral-darkest);
+  color: var(--link-text-color);
+
+  :is(:hover, :active, :focus) {
+    color: var(--link-text-color-active);
+  }
 }
