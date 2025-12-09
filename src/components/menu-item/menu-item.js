@@ -4,6 +4,9 @@ import { LitElement, css, html } from "lit";
  * @tag tt-menu
  * @summary A menu component with horizontal and vertical options.
  *
+ * @cssProp --tt-menu-item-color - The optional menu item color.
+ * @cssProp --tt-menu-item-color-active - The optional menu item color when active.
+ *
  */
 
 export class TTMenuItem extends LitElement {

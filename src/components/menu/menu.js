@@ -5,6 +5,10 @@ import { classMap } from "lit/directives/class-map.js";
  * @tag tt-menu
  * @summary A menu component with horizontal and vertical options.
  *
+ * @cssProp --tt-menu-gap - The spacing between menu items.
+ * @cssProp --tt-menu-color - The optional menu item color.
+ * @cssProp --tt-menu-color-active - The optional menu item color when active.
+ *
  */
 
 export class TTMenu extends LitElement {
