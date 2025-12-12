@@ -6,11 +6,11 @@ import { LitElement, css, html } from "lit";
  *
  * @property {number} containerMaxWidth - The header containers max width, optional.
  *
- * @cssprop --tt-header-background - The header background.
- * @cssprop --tt-header-padding-x - The header's horizontal padding.
- * @cssprop --tt-header-padding-y - The header's vertical padding.
- * @cssprop --tt-header-column-gap - The spacing between columns.
- * @cssprop --tt-header-border - The bottom border width, style, and color.
+ * @cssprop [--tt-header-background=none] - The header background.
+ * @cssprop [--tt-header-padding-x=0] - The header's horizontal padding.
+ * @cssprop [--tt-header-padding-y=0] - The header's vertical padding.
+ * @cssprop [--tt-header-column-gap=var(--space-md)] - The spacing between columns.
+ * @cssprop [--tt-header-border=1px solid var(--color-neutral)] - The bottom border width, style, and color.
  *
  * @slot start - The first column.
  * @slot center - The middle column.
