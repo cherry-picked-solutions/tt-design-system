@@ -10,13 +10,15 @@ import { LitElement, css, html } from "lit";
  * @property {'reset' | 'button' | 'submit'} type - The type of the button. Defaults to 'button'.
  * @attr {'reset' | 'button' | 'submit'} type - The type of the button. Defaults to 'button'.
  *
- * @cssProp --tt-button-background=var(--color-neutral-darkest) - Background color of the button.
- * @cssProp --tt-button-background-active=var(--color-neutral-darker) - Background color of the button on hover/focus.
- * @cssProp --tt-button-text=var(--color-neutral-lightest) - Text color of the button.
- * @cssProp --tt-button-padding-x=var(--space-sm) - Horizontal padding of the button.
- * @cssProp --tt-button-padding-y=var(--space-xs) - Vertical padding of the button.
- * @cssProp --tt-button-radius=var(--space-xxs) - Border radius of the button.
+ * @cssprop [--tt-button-background=var(--color-neutral-darkest)] - Background color of the button.
+ * @cssprop [--tt-button-background-active=var(--color-neutral-darker)] - Background color of the button on hover/focus.
+ * @cssprop [--tt-button-text=var(--color-neutral-lightest)] - Text color of the button.
+ * @cssprop [--tt-button-padding-x=var(--space-sm)] - Horizontal padding of the button.
+ * @cssprop [--tt-button-padding-y=var(--space-xs)] - Vertical padding of the button.
+ * @cssprop [--tt-button-radius=var(--space-xxs)] - Border radius of the button.
+ *
  */
+
 export class TTButton extends LitElement {
   static styles = css`
     :host {
