@@ -1,6 +1,12 @@
 // We'll have to import the global stylesheet in downstream projects
 import "../src/assets/styles/global/index.css";
 
+// Custom elements manifest for
+// import { setCustomElementsManifest } from "@storybook/web-components-vite";
+// import customElements from "../custom-elements.json";
+
+// setCustomElementsManifest(customElements);
+
 /** @type { import('@storybook/web-components-vite').Preview } */
 const preview = {
   parameters: {
