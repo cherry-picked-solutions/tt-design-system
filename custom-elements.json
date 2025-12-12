@@ -10,6 +10,38 @@
           "kind": "class",
           "description": "",
           "name": "TTButton",
+          "cssProperties": [
+            {
+              "description": "Background color of the button.",
+              "name": "--tt-button-background",
+              "default": "var(--color-neutral-darkest)"
+            },
+            {
+              "description": "Background color of the button on hover/focus.",
+              "name": "--tt-button-background-active",
+              "default": "var(--color-neutral-darker)"
+            },
+            {
+              "description": "Text color of the button.",
+              "name": "--tt-button-text",
+              "default": "var(--color-neutral-lightest)"
+            },
+            {
+              "description": "Horizontal padding of the button.",
+              "name": "--tt-button-padding-x",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "Vertical padding of the button.",
+              "name": "--tt-button-padding-y",
+              "default": "var(--space-xs)"
+            },
+            {
+              "description": "Border radius of the button.",
+              "name": "--tt-button-radius",
+              "default": "var(--space-xxs)"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -194,6 +226,28 @@
           "kind": "class",
           "description": "",
           "name": "TTHeader",
+          "cssProperties": [
+            {
+              "description": "The header background.",
+              "name": "--tt-header-background"
+            },
+            {
+              "description": "The header's horizontal padding.",
+              "name": "--tt-header-padding-x"
+            },
+            {
+              "description": "The header's vertical padding.",
+              "name": "--tt-header-padding-y"
+            },
+            {
+              "description": "The spacing between columns.",
+              "name": "--tt-header-column-gap"
+            },
+            {
+              "description": "The bottom border width, style, and color.",
+              "name": "--tt-header-border"
+            }
+          ],
           "slots": [
             {
               "description": "The first column.",
@@ -315,6 +369,23 @@
           "kind": "class",
           "description": "",
           "name": "TTMenu",
+          "cssProperties": [
+            {
+              "description": "The space between menu items.",
+              "name": "--tt-menu-gap",
+              "default": "var(--space-md)"
+            },
+            {
+              "description": "The menu item colors.",
+              "name": "--tt-menu-color",
+              "default": "var(--link-text-color)"
+            },
+            {
+              "description": "The active/hover/focus color of menu items.",
+              "name": "--tt-menu-color-active",
+              "default": "var(--link-text-color-active)"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -330,9 +401,10 @@
               "name": "_menuItems",
               "privacy": "public",
               "type": {
-                "text": "array"
+                "text": "Array<Element>"
               },
               "default": "[]",
+              "description": "(private) Internal state of slotted menu items.",
               "attribute": "_menuItems"
             },
             {
@@ -348,19 +420,21 @@
           ],
           "attributes": [
             {
-              "name": "_menuItems",
-              "type": {
-                "text": "array"
-              },
-              "default": "[]",
-              "fieldName": "_menuItems"
-            },
-            {
-              "name": "inline",
               "type": {
                 "text": "boolean"
               },
+              "description": "Horizontal (inline) or block style menu.",
+              "name": "inline",
               "fieldName": "inline"
+            },
+            {
+              "name": "_menuItems",
+              "type": {
+                "text": "Array<Element>"
+              },
+              "default": "[]",
+              "description": "(private) Internal state of slotted menu items.",
+              "fieldName": "_menuItems"
             }
           ],
           "superclass": {
@@ -369,7 +443,7 @@
           },
           "tagName": "tt-menu",
           "customElement": true,
-          "summary": "A menu component with horizontal and vertical options."
+          "summary": "A menu component that renders a `<nav>` element with horizontal and vertical options."
         }
       ],
       "exports": [
@@ -446,6 +520,18 @@
           "kind": "class",
           "description": "",
           "name": "TTMenuItem",
+          "cssProperties": [
+            {
+              "description": "The menu item colors.",
+              "name": "--tt-menu-item-color",
+              "default": "var(--link-text-color)"
+            },
+            {
+              "description": "The active/hover/focus color of menu items.",
+              "name": "--tt-menu-item-color-active",
+              "default": "var(--link-text-color-active)"
+            }
+          ],
           "members": [
             {
               "kind": "method",

@@ -3,7 +3,15 @@ import { classMap } from "lit/directives/class-map.js";
 
 /**
  * @tag tt-menu
- * @summary A menu component with horizontal and vertical options.
+ * @summary A menu component that renders a `<nav>` element with horizontal and vertical options.
+ *
+ * @attr {boolean} inline - Horizontal (inline) or block style menu.
+ *
+ *  @prop {Array<Element>} _menuItems - (private) Internal state of slotted menu items.
+ *
+ * @cssprop [--tt-menu-gap=var(--space-md)] - The space between menu items.
+ * @cssprop [--tt-menu-color=var(--link-text-color)] - The menu item colors.
+ * @cssprop [--tt-menu-color-active=var(--link-text-color-active)] - The active/hover/focus color of menu items.
  *
  */
 
