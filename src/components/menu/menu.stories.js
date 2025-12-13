@@ -1,4 +1,4 @@
-import { html, nothing } from "lit";
+import { html } from "lit";
 import "./menu";
 import "../menu-item/menu-item";
 
