@@ -220,6 +220,154 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/header/header.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTHeader",
+          "cssProperties": [
+            {
+              "description": "The header background.",
+              "name": "--tt-header-background",
+              "default": "none"
+            },
+            {
+              "description": "The header's horizontal padding.",
+              "name": "--tt-header-padding-x",
+              "default": "0"
+            },
+            {
+              "description": "The header's vertical padding.",
+              "name": "--tt-header-padding-y",
+              "default": "0"
+            },
+            {
+              "description": "The spacing between columns.",
+              "name": "--tt-header-column-gap",
+              "default": "var(--space-md)"
+            },
+            {
+              "description": "The bottom border width, style, and color.",
+              "name": "--tt-header-border",
+              "default": "1px solid var(--color-neutral)"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The first column.",
+              "name": "start"
+            },
+            {
+              "description": "The middle column.",
+              "name": "center"
+            },
+            {
+              "description": "The last column.",
+              "name": "end"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "containerMaxWidth",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "null",
+              "description": "The header containers max width, optional.",
+              "attribute": "container-max-width"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "container-max-width",
+              "type": {
+                "text": "number"
+              },
+              "default": "null",
+              "description": "The header containers max width, optional.",
+              "fieldName": "containerMaxWidth"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-header",
+          "customElement": true,
+          "summary": "A header component with three columns."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTHeader",
+          "declaration": {
+            "name": "TTHeader",
+            "module": "src/components/header/header.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-header",
+          "declaration": {
+            "name": "TTHeader",
+            "module": "src/components/header/header.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/header/header.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        },
+        {
+          "kind": "variable",
+          "name": "Constrained",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { containerMaxWidth: 1000, slotStart: \"<h1>Constrained width</h1>\", }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/header/header.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/components/header/header.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Constrained",
+          "declaration": {
+            "name": "Constrained",
+            "module": "src/components/header/header.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/menu/menu.js",
       "declarations": [
         {
@@ -365,154 +513,6 @@
           "declaration": {
             "name": "Inline",
             "module": "src/components/menu/menu.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/header/header.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "TTHeader",
-          "cssProperties": [
-            {
-              "description": "The header background.",
-              "name": "--tt-header-background",
-              "default": "none"
-            },
-            {
-              "description": "The header's horizontal padding.",
-              "name": "--tt-header-padding-x",
-              "default": "0"
-            },
-            {
-              "description": "The header's vertical padding.",
-              "name": "--tt-header-padding-y",
-              "default": "0"
-            },
-            {
-              "description": "The spacing between columns.",
-              "name": "--tt-header-column-gap",
-              "default": "var(--space-md)"
-            },
-            {
-              "description": "The bottom border width, style, and color.",
-              "name": "--tt-header-border",
-              "default": "1px solid var(--color-neutral)"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The first column.",
-              "name": "start"
-            },
-            {
-              "description": "The middle column.",
-              "name": "center"
-            },
-            {
-              "description": "The last column.",
-              "name": "end"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "containerMaxWidth",
-              "privacy": "public",
-              "type": {
-                "text": "number"
-              },
-              "default": "null",
-              "description": "The header containers max width, optional.",
-              "attribute": "container-max-width"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "container-max-width",
-              "type": {
-                "text": "number"
-              },
-              "default": "null",
-              "description": "The header containers max width, optional.",
-              "fieldName": "containerMaxWidth"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "tt-header",
-          "customElement": true,
-          "summary": "A header component with three columns."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TTHeader",
-          "declaration": {
-            "name": "TTHeader",
-            "module": "src/components/header/header.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "tt-header",
-          "declaration": {
-            "name": "TTHeader",
-            "module": "src/components/header/header.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/header/header.stories.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Default",
-          "type": {
-            "text": "object"
-          },
-          "default": "{}"
-        },
-        {
-          "kind": "variable",
-          "name": "Constrained",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { containerMaxWidth: 1000, slotStart: \"<h1>Constrained width</h1>\", }, }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/components/header/header.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Default",
-          "declaration": {
-            "name": "Default",
-            "module": "src/components/header/header.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Constrained",
-          "declaration": {
-            "name": "Constrained",
-            "module": "src/components/header/header.stories.js"
           }
         }
       ]
