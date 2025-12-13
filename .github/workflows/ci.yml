@@ -21,3 +21,25 @@ jobs:
         run: npm ci
       - name: Build Storybook
         run: npm run build-storybook
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm ci
+      - name: Check formatting
+        run: npm run format
+
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm ci
+      - name: Check linting
+        run: npm run lint
