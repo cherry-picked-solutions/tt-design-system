@@ -46,4 +46,22 @@
       "customElements.define(\"tt-${2:component}\", TT${1:Component});",
     ],
   },
+  "Component Story": {
+    "scope": "javascript",
+    "prefix": "story",
+    "body": [
+      "import { html } from \"lit\";",
+      "import \"./${1:component}\"",
+      "",
+      "export default {",
+      "  title: \"Components/${2:Component}\",",
+      "  component: \"tt-${1:component}\",",
+      "  render: (args) => html`",
+      "    <tt-${1:component}>$0</tt-${1:component}>",
+      "  `,",
+      "  args: {}",
+      "}",
+      "",
+    ],
+  },
 }
