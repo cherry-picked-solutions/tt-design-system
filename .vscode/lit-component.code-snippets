@@ -25,7 +25,7 @@
       " * @tag tt-${2:component}",
       " * @summary $3",
       " *",
-      " * @cssprop [--tt-example=var(--token)]",
+      " * @cssprop [--tt-example=var(--token)] - A brief description.",
       " *",
       " */",
       "",
