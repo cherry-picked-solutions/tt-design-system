@@ -589,6 +589,120 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/chip/chip.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTChip",
+          "cssProperties": [
+            {
+              "name": "--tt-example",
+              "default": "var(--token)"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"md\"",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "variant",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "One of: xxs | xs | sm | md | lg | xl | xxl. Default: `md`.",
+              "name": "size",
+              "default": "\"md\"",
+              "fieldName": "size"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "variant"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-chip",
+          "customElement": true,
+          "summary": "A chip component."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTChip",
+          "declaration": {
+            "name": "TTChip",
+            "module": "src/components/chip/chip.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-chip",
+          "declaration": {
+            "name": "TTChip",
+            "module": "src/components/chip/chip.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/chip/chip.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/chip/chip.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/components/chip/chip.stories.js"
+          }
+        }
+      ]
     }
   ]
 }
