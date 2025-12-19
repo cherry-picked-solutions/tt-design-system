@@ -42,7 +42,7 @@ export class TTChip extends LitElement {
       --tt-chip-padding-x: var(--space-xs);
       --tt-chip-padding-y: var(--space-xxs);
 
-      font-size: 0.75rem; // 12px
+      font-size: 0.75rem; /* 12px */
     }
 
     .tt-chip--lg {
