@@ -12,8 +12,20 @@ export default {
   args: {
     label: "Chip",
     variant: "",
-    size: "xs",
+    size: "",
   },
 };
 
 export const Default = {};
+
+export const Small = {
+  args: {
+    size: "sm",
+  },
+};
+
+export const Large = {
+  args: {
+    size: "lg",
+  },
+};

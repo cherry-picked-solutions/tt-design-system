@@ -1,21 +1,23 @@
 import { classMap } from "lit/directives/class-map.js";
 import { LitElement, html, css } from "lit";
 
-const CHIP_SIZES = ["xxs", "xs", "sm", "md", "lg", "xl", "xxl"];
+const CHIP_SIZES = ["sm", "md", "lg"];
 
 /**
  * @tag tt-chip
  * @summary A chip component.
  *
- * @attr {string} size - One of: xxs | xs | sm | md | lg | xl | xxl. Default: `md`.
+ * @attr {string} size - One of: sm | md | lg. Default: `md`.
  *
- * @cssprop [--tt-example=var(--token)]
+ * @cssprop [--tt-chip-background-color=var(--color-neutral)] - The background color.
+ * @cssprop [--tt-chip-border-radius=var(--space-md)] - The roundness of the corners.
+ * @cssprop [--tt-chip-border=var(--color-neutral-dark)] - The border width, style, and color.
+ * @cssprop [--tt-chip-padding-x=var(--space-sm)] - The inner side spacing.
+ * @cssprop [--tt-chip-padding-y=var(--space-xxs)] - The inner vertical spacing.
  *
  */
-
 export class TTChip extends LitElement {
   static properties = {
-    variant: { type: String, reflect: true },
     size: { type: String, reflect: true },
   };
 
@@ -32,13 +34,20 @@ export class TTChip extends LitElement {
       background-color: var(--tt-chip-background-color);
       border-radius: var(--tt-chip-border-radius);
       border: var(--tt-chip-border);
+      font-size: var(--space-sm);
       padding: var(--tt-chip-padding-y) var(--tt-chip-padding-x);
     }
 
+    .tt-chip--sm {
+      --tt-chip-padding-x: var(--space-xs);
+      --tt-chip-padding-y: var(--space-xxs);
+
+      font-size: 0.75rem; // 12px
+    }
+
     .tt-chip--lg {
-      border-radius: 1.5em;
-      font-size: 1.1rem;
-      padding: 0.5em 1em;
+      --tt-chip-padding-x: var(--space-sm);
+      font-size: var(--font-size-base);
     }
   `;
 
@@ -50,8 +59,6 @@ export class TTChip extends LitElement {
   render() {
     const size = CHIP_SIZES.includes(this.size) ? this.size : "md";
     const classes = classMap({
-      "tt-chip--primary": this.variant === "primary",
-      "tt-chip--secondary": this.variant === "secondary",
       [`tt-chip--${size}`]: size !== "md",
     });
 
