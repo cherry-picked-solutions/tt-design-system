@@ -220,6 +220,81 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/card/card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTCard",
+          "cssProperties": [
+            {
+              "description": "A brief description.",
+              "name": "--tt-example",
+              "default": "var(--token)"
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-card",
+          "customElement": true,
+          "summary": "A card component."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTCard",
+          "declaration": {
+            "name": "TTCard",
+            "module": "src/components/card/card.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-card",
+          "declaration": {
+            "name": "TTCard",
+            "module": "src/components/card/card.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card/card.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/card/card.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/components/card/card.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/chip/chip.js",
       "declarations": [
         {
