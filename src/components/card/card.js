@@ -25,6 +25,7 @@ export class TTCard extends LitElement {
     }
 
     .tt-card {
+      background-color: var(--tt-card-background);
       border: var(--tt-card-border);
       border-radius: var(--tt-card-border-radius);
     }
