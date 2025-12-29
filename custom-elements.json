@@ -228,9 +228,34 @@
           "name": "TTCard",
           "cssProperties": [
             {
-              "description": "A brief description.",
-              "name": "--tt-example",
-              "default": "var(--token)"
+              "description": "The background color.",
+              "name": "--tt-card-background",
+              "default": "none"
+            },
+            {
+              "description": "The inside side spacing.",
+              "name": "--tt-card-padding-x",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "The inside vertical spacing.",
+              "name": "--tt-card-padding-y",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "The width of the border.",
+              "name": "--tt-card-border-width",
+              "default": "1px"
+            },
+            {
+              "description": "The border width, style, and color.",
+              "name": "--tt-card-border",
+              "default": "var(--tt-card-border-width) solid var(--color-neutral)"
+            },
+            {
+              "description": "The roundness of the corners.",
+              "name": "--tt-card-border-radius",
+              "default": "var(--space-xxs)"
             }
           ],
           "members": [],
@@ -272,7 +297,15 @@
           "type": {
             "text": "object"
           },
-          "default": "{}"
+          "default": "{ render: () => html` <tt-card> <h1 slot=\"header\" class=\"tt-card__title\">Hello world</h1> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste nam nostrum laborum vel ullam quidem cumque asperiores? </p> <tt-button slot=\"footer\">Visit Omaha</tt-button> </tt-card>`, }"
+        },
+        {
+          "kind": "variable",
+          "name": "WithMedia",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { media: defaultImage, }, render: (args) => html` <tt-card> <h1 slot=\"header\" class=\"tt-card__title\">Hello world</h1> ${args.media ? unsafeHTML(args.media) : html`${defaultImage}`} <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste nam nostrum laborum vel ullam quidem cumque asperiores? </p> <tt-button slot=\"footer\">Visit Omaha</tt-button> </tt-card>`, }"
         }
       ],
       "exports": [
@@ -288,6 +321,14 @@
           "name": "Default",
           "declaration": {
             "name": "Default",
+            "module": "src/components/card/card.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "WithMedia",
+          "declaration": {
+            "name": "WithMedia",
             "module": "src/components/card/card.stories.js"
           }
         }
