@@ -67,3 +67,9 @@ Some basic rules to keep in mind when styling components.
    - Each component is independent and themable.
    - Works out of the box: Users don't have to modify anything because it comes with good defaults.
    - Auto updates: Changing global colors automatically updates the deepest leaf.
+
+## Recommended VS Code Extensions
+
+| Extension | Description                                                                            |
+| :-------- | :------------------------------------------------------------------------------------- |
+| Peacock   | Sets custom window colors so you can easily distinguish it from other VS Code windows. |
