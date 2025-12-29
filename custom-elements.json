@@ -220,6 +220,122 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/card/card.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTCard",
+          "cssProperties": [
+            {
+              "description": "The background color.",
+              "name": "--tt-card-background",
+              "default": "none"
+            },
+            {
+              "description": "The inside side spacing.",
+              "name": "--tt-card-padding-x",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "The inside vertical spacing.",
+              "name": "--tt-card-padding-y",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "The width of the border.",
+              "name": "--tt-card-border-width",
+              "default": "1px"
+            },
+            {
+              "description": "The border width, style, and color.",
+              "name": "--tt-card-border",
+              "default": "var(--tt-card-border-width) solid var(--color-neutral)"
+            },
+            {
+              "description": "The roundness of the corners.",
+              "name": "--tt-card-border-radius",
+              "default": "var(--space-xxs)"
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-card",
+          "customElement": true,
+          "summary": "A card component."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTCard",
+          "declaration": {
+            "name": "TTCard",
+            "module": "src/components/card/card.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-card",
+          "declaration": {
+            "name": "TTCard",
+            "module": "src/components/card/card.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/card/card.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ render: () => html` <tt-card> <h1 slot=\"header\" class=\"tt-card__title\">Hello world</h1> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste nam nostrum laborum vel ullam quidem cumque asperiores? </p> <tt-button slot=\"footer\">Visit Omaha</tt-button> </tt-card>`, }"
+        },
+        {
+          "kind": "variable",
+          "name": "WithMedia",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { media: defaultImage, }, render: (args) => html` <tt-card> <h1 slot=\"header\" class=\"tt-card__title\">Hello world</h1> ${args.media ? unsafeHTML(args.media) : html`${defaultImage}`} <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste nam nostrum laborum vel ullam quidem cumque asperiores? </p> <tt-button slot=\"footer\">Visit Omaha</tt-button> </tt-card>`, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/card/card.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/components/card/card.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "WithMedia",
+          "declaration": {
+            "name": "WithMedia",
+            "module": "src/components/card/card.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/chip/chip.js",
       "declarations": [
         {
