@@ -26,3 +26,19 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          autoAcceptChanges: "main"
+          skip: "dependabot/**"
+      - name: "Comment preview links"
+        uses: peter-evans/find-comment@v4
+        id: sbfc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-id: ${{ steps.sbfc.outputs.comment-id }}
+          edit-mode: replace
+          body: |
+            ## Storybook Preview
+
+            | Description           | URL                                                    |
+            | :-------------------- | :----------------------------------------------------- |
+            | **Build url**         | ${{ steps.chromatic.outputs.buildUrl }}                |
+            | **Storybook Preview** | ${{ steps.chromatic.outputs.storybookUrl }}            |
