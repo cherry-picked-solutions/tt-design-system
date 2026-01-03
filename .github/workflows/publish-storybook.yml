@@ -6,6 +6,7 @@ on:
       - ".storybook/**"
       - "package.json"
       - "src/**"
+  workflow_dispatch:
 
 jobs:
   publish-sb:
