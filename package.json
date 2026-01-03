@@ -18,7 +18,8 @@
     "test": "echo \"Error:, no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "start": "npm run storybook & npm run manifest:watch"
+    "start": "npm run storybook & npm run manifest:watch",
+    "publish:chromatic": "npx chromatic --exitzero-on-changes"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "@storybook/web-components-vite": "9.1.13",
     "@vitest/browser": "3.2.4",
     "@vitest/coverage-v8": "3.2.4",
+    "chromatic": "13.3.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-lit": "2.1.1",
     "globals": "16.5.0",

@@ -1,0 +1,26 @@
+name: "Publish Storybook"
+
+on:
+  pull_request:
+    paths:
+      - ".storybook/**"
+      - "package.json"
+      - "src/**"
+
+jobs:
+  publish-sb:
+    name: "Publish StorybookJS"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci
+      - name: "Publish on Chromatic"
+        id: chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
