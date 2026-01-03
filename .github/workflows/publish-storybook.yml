@@ -13,6 +13,9 @@ on:
       - "src/**"
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+
 jobs:
   publish-sb:
     name: "Publish StorybookJS"
