@@ -44,7 +44,7 @@ jobs:
           body-includes: Storybook Preview
       - name: "Create or update comment"
         if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
-        uses: peter-evans/find-comment@v5
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: "github-actions[bot]"
