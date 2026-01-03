@@ -6,6 +6,11 @@ on:
       - ".storybook/**"
       - "package.json"
       - "src/**"
+  pull_request:
+    paths:
+      - ".storybook/**"
+      - "package.json"
+      - "src/**"
   workflow_dispatch:
 
 jobs:
@@ -30,6 +35,7 @@ jobs:
           autoAcceptChanges: "main"
           skip: "dependabot/**"
       - name: "Comment preview links"
+        if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
         uses: peter-evans/find-comment@v4
         id: sbfc
         with:
