@@ -14,5 +14,10 @@ const config = {
     name: "@storybook/web-components-vite",
     options: {},
   },
+  async viteFinal(config) {
+    const { mergeConfig } = await import("vite");
+    const customConfig = (await import("./vite.config.js")).default;
+    return mergeConfig(config, customConfig);
+  },
 };
 export default config;

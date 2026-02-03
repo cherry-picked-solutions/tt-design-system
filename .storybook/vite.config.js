@@ -1,15 +1,11 @@
 import { defineConfig } from "vite";
-import { viteStaticCopy } from "vite-plugin-static-copy";
+import path from "node:path";
+// import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        {
-          src: "src/assets/styles/global.css",
-          dest: "assets/styles",
-        },
-      ],
-    }),
-  ],
+  resolve: {
+    alias: {
+      "@components": path.resolve("src/components"),
+    },
+  },
 });
