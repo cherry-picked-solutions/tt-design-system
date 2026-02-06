@@ -377,7 +377,7 @@
             {
               "description": "The background color.",
               "name": "--tt-chip-background-color",
-              "default": "var(--color-neutral)"
+              "default": "var(--color-neutral-lightest)"
             },
             {
               "description": "The roundness of the corners.",
