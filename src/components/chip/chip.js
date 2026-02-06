@@ -9,7 +9,7 @@ const CHIP_SIZES = ["sm", "md", "lg"];
  *
  * @attr {string} size - One of: sm | md | lg. Default: `md`.
  *
- * @cssprop [--tt-chip-background-color=var(--color-neutral)] - The background color.
+ * @cssprop [--tt-chip-background-color=var(--color-neutral-lightest)] - The background color.
  * @cssprop [--tt-chip-border-radius=var(--space-md)] - The roundness of the corners.
  * @cssprop [--tt-chip-border=var(--color-neutral-dark)] - The border width, style, and color.
  * @cssprop [--tt-chip-padding-x=var(--space-sm)] - The inner side spacing.
@@ -23,7 +23,7 @@ export class TTChip extends LitElement {
 
   static styles = css`
     :host {
-      --tt-chip-background-color: var(--color-neutral);
+      --tt-chip-background-color: var(--color-neutral-lightest);
       --tt-chip-border-radius: var(--space-md);
       --tt-chip-border: 1px solid var(--color-neutral-dark);
       --tt-chip-padding-x: var(--space-sm);
