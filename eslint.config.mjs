@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";
@@ -13,4 +16,5 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   eslintConfigPrettier,
+  ...storybook.configs["flat/recommended"],
 ]);
