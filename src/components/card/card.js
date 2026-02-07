@@ -39,6 +39,8 @@ export class TTCard extends LitElement {
     ::slotted([slot="media"]) {
       margin-inline: calc(-1 * var(--tt-card-border-width));
       padding: 0;
+      object-fit: cover;
+      width: 100%;
     }
 
     .tt-card__media::slotted(img) {

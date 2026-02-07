@@ -4,6 +4,37 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "src/pages/demo.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/pages/demo.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/pages/demo.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/button/button.js",
       "declarations": [
         {
@@ -346,7 +377,7 @@
             {
               "description": "The background color.",
               "name": "--tt-chip-background-color",
-              "default": "var(--color-neutral)"
+              "default": "var(--color-neutral-lightest)"
             },
             {
               "description": "The roundness of the corners.",
@@ -634,6 +665,79 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/menu-item/menu-item.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTMenuItem",
+          "cssProperties": [
+            {
+              "description": "The menu item colors.",
+              "name": "--tt-menu-item-color",
+              "default": "var(--link-text-color)"
+            },
+            {
+              "description": "The active/hover/focus color of menu items.",
+              "name": "--tt-menu-item-color-active",
+              "default": "var(--link-text-color-active)"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "_toggle"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "href",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "href"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-menu",
+          "customElement": true,
+          "summary": "A menu component with horizontal and vertical options."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTMenuItem",
+          "declaration": {
+            "name": "TTMenuItem",
+            "module": "src/components/menu-item/menu-item.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-menu-item",
+          "declaration": {
+            "name": "TTMenuItem",
+            "module": "src/components/menu-item/menu-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/menu/menu.js",
       "declarations": [
         {
@@ -779,79 +883,6 @@
           "declaration": {
             "name": "Inline",
             "module": "src/components/menu/menu.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/menu-item/menu-item.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "TTMenuItem",
-          "cssProperties": [
-            {
-              "description": "The menu item colors.",
-              "name": "--tt-menu-item-color",
-              "default": "var(--link-text-color)"
-            },
-            {
-              "description": "The active/hover/focus color of menu items.",
-              "name": "--tt-menu-item-color-active",
-              "default": "var(--link-text-color-active)"
-            }
-          ],
-          "members": [
-            {
-              "kind": "method",
-              "name": "_toggle"
-            },
-            {
-              "kind": "field",
-              "name": "href",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "attribute": "href",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "name": "href",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "href"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "tt-menu",
-          "customElement": true,
-          "summary": "A menu component with horizontal and vertical options."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TTMenuItem",
-          "declaration": {
-            "name": "TTMenuItem",
-            "module": "src/components/menu-item/menu-item.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "tt-menu-item",
-          "declaration": {
-            "name": "TTMenuItem",
-            "module": "src/components/menu-item/menu-item.js"
           }
         }
       ]
