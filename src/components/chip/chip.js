@@ -1,5 +1,6 @@
 import { classMap } from "lit/directives/class-map.js";
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
+import styles from "./chip.css";
 
 const CHIP_SIZES = ["sm", "md", "lg"];
 
@@ -21,35 +22,7 @@ export class TTChip extends LitElement {
     size: { type: String, reflect: true },
   };
 
-  static styles = css`
-    :host {
-      --tt-chip-background-color: var(--color-neutral-lightest);
-      --tt-chip-border-radius: var(--space-md);
-      --tt-chip-border: 1px solid var(--color-neutral-dark);
-      --tt-chip-padding-x: var(--space-sm);
-      --tt-chip-padding-y: var(--space-xxs);
-    }
-
-    .tt-chip {
-      background-color: var(--tt-chip-background-color);
-      border-radius: var(--tt-chip-border-radius);
-      border: var(--tt-chip-border);
-      font-size: var(--space-sm);
-      padding: var(--tt-chip-padding-y) var(--tt-chip-padding-x);
-    }
-
-    .tt-chip--sm {
-      --tt-chip-padding-x: var(--space-xs);
-      --tt-chip-padding-y: var(--space-xxs);
-
-      font-size: 0.75rem; /* 12px */
-    }
-
-    .tt-chip--lg {
-      --tt-chip-padding-x: var(--space-sm);
-      font-size: var(--font-size-base);
-    }
-  `;
+  static styles = [styles];
 
   constructor() {
     super();
