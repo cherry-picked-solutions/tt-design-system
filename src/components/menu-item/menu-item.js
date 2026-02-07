@@ -1,4 +1,5 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, html } from "lit";
+import styles from "./menu-item.css";
 
 /**
  * @tag tt-menu
@@ -13,24 +14,7 @@ export class TTMenuItem extends LitElement {
     href: { type: String, reflect: true },
   };
 
-  static styles = css`
-    :host {
-      --tt-menu-item-color: var(--tt-menu-color, var(--link-text-color));
-      --tt-menu-item-color-active: var(
-        --tt-menu-color-active,
-        var(--link-text-color-active)
-      );
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-
-      :is(:hover, :active, :focus) {
-        color: var(--tt-menu-item-color-active);
-      }
-    }
-  `;
+  static styles = [styles];
 
   constructor() {
     super();
