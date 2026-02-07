@@ -4,61 +4,6 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/components/index.js",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TtButton",
-          "declaration": {
-            "name": "TtButton",
-            "module": "src/components/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TtCard",
-          "declaration": {
-            "name": "TtCard",
-            "module": "src/components/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TtChip",
-          "declaration": {
-            "name": "TtChip",
-            "module": "src/components/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TtHeader",
-          "declaration": {
-            "name": "TtHeader",
-            "module": "src/components/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TtMenu",
-          "declaration": {
-            "name": "TtMenu",
-            "module": "src/components/index.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "TtMenuItem",
-          "declaration": {
-            "name": "TtMenuItem",
-            "module": "src/components/index.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/pages/demo.stories.js",
       "declarations": [
         {
@@ -84,222 +29,6 @@
           "declaration": {
             "name": "Default",
             "module": "src/pages/demo.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/button/button.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "TTButton",
-          "cssProperties": [
-            {
-              "description": "Background color of the button.",
-              "name": "--tt-button-background",
-              "default": "var(--color-neutral-darkest)"
-            },
-            {
-              "description": "Background color of the button on hover/focus.",
-              "name": "--tt-button-background-active",
-              "default": "var(--color-neutral-darker)"
-            },
-            {
-              "description": "Text color of the button.",
-              "name": "--tt-button-text",
-              "default": "var(--color-neutral-lightest)"
-            },
-            {
-              "description": "Horizontal padding of the button.",
-              "name": "--tt-button-padding-x",
-              "default": "var(--space-sm)"
-            },
-            {
-              "description": "Vertical padding of the button.",
-              "name": "--tt-button-padding-y",
-              "default": "var(--space-xs)"
-            },
-            {
-              "description": "Border radius of the button.",
-              "name": "--tt-button-radius",
-              "default": "var(--space-xxs)"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "_type",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"button\""
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "privacy": "public",
-              "type": {
-                "text": "'reset' | 'button' | 'submit'"
-              },
-              "description": "The type of the button. Defaults to 'button'.",
-              "attribute": "type",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "size",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The size of the button. Can be \"small\" or \"large\".",
-              "attribute": "size",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "type": {
-                "text": "'reset' | 'button' | 'submit'"
-              },
-              "description": "The type of the button. Defaults to 'button'.",
-              "name": "type",
-              "fieldName": "type"
-            },
-            {
-              "name": "variant",
-              "type": {
-                "text": "string"
-              },
-              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
-              "fieldName": "variant"
-            },
-            {
-              "name": "size",
-              "type": {
-                "text": "string"
-              },
-              "description": "The size of the button. Can be \"small\" or \"large\".",
-              "fieldName": "size"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "tt-button",
-          "customElement": true,
-          "summary": "A custom button element."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TTButton",
-          "declaration": {
-            "name": "TTButton",
-            "module": "src/components/button/button.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "tt-button",
-          "declaration": {
-            "name": "TTButton",
-            "module": "src/components/button/button.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/button/button.stories.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Primary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { variant: \"primary\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Secondary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { variant: \"secondary\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Large",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: \"large\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Small",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: \"small\", }, }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Primary",
-          "declaration": {
-            "name": "Primary",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Secondary",
-          "declaration": {
-            "name": "Secondary",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Large",
-          "declaration": {
-            "name": "Large",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Small",
-          "declaration": {
-            "name": "Small",
-            "module": "src/components/button/button.stories.js"
           }
         }
       ]
@@ -566,6 +295,222 @@
           "declaration": {
             "name": "Large",
             "module": "src/components/chip/chip.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTButton",
+          "cssProperties": [
+            {
+              "description": "Background color of the button.",
+              "name": "--tt-button-background",
+              "default": "var(--color-neutral-darkest)"
+            },
+            {
+              "description": "Background color of the button on hover/focus.",
+              "name": "--tt-button-background-active",
+              "default": "var(--color-neutral-darker)"
+            },
+            {
+              "description": "Text color of the button.",
+              "name": "--tt-button-text",
+              "default": "var(--color-neutral-lightest)"
+            },
+            {
+              "description": "Horizontal padding of the button.",
+              "name": "--tt-button-padding-x",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "Vertical padding of the button.",
+              "name": "--tt-button-padding-y",
+              "default": "var(--space-xs)"
+            },
+            {
+              "description": "Border radius of the button.",
+              "name": "--tt-button-radius",
+              "default": "var(--space-xxs)"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_type",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"button\""
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "type": {
+                "text": "'reset' | 'button' | 'submit'"
+              },
+              "description": "The type of the button. Defaults to 'button'.",
+              "attribute": "type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The size of the button. Can be \"small\" or \"large\".",
+              "attribute": "size",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "'reset' | 'button' | 'submit'"
+              },
+              "description": "The type of the button. Defaults to 'button'.",
+              "name": "type",
+              "fieldName": "type"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "string"
+              },
+              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
+              "fieldName": "variant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "description": "The size of the button. Can be \"small\" or \"large\".",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-button",
+          "customElement": true,
+          "summary": "A custom button element."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTButton",
+          "declaration": {
+            "name": "TTButton",
+            "module": "src/components/button/button.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-button",
+          "declaration": {
+            "name": "TTButton",
+            "module": "src/components/button/button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/button.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Primary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { variant: \"primary\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Secondary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { variant: \"secondary\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Large",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { size: \"large\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Small",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { size: \"small\", }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Primary",
+          "declaration": {
+            "name": "Primary",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Secondary",
+          "declaration": {
+            "name": "Secondary",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Large",
+          "declaration": {
+            "name": "Large",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Small",
+          "declaration": {
+            "name": "Small",
+            "module": "src/components/button/button.stories.js"
           }
         }
       ]
