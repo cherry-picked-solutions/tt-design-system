@@ -1,4 +1,5 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
+import styles from "./card.css";
 
 /**
  * @tag tt-card
@@ -14,39 +15,7 @@ import { LitElement, html, css } from "lit";
  */
 
 export class TTCard extends LitElement {
-  static styles = css`
-    :host {
-      --tt-card-background: none;
-      --tt-card-padding-x: var(--space-sm);
-      --tt-card-padding-y: var(--space-sm);
-      --tt-card-border-width: 1px;
-      --tt-card-border: var(--tt-card-border-width) solid var(--color-neutral);
-      --tt-card-border-radius: var(--space-xxs);
-    }
-
-    .tt-card {
-      background-color: var(--tt-card-background);
-      border: var(--tt-card-border);
-      border-radius: var(--tt-card-border-radius);
-    }
-
-    .tt-card ::slotted(*) {
-      margin: 0;
-      padding: var(--tt-card-padding-y) var(--tt-card-padding-x);
-    }
-
-    /* Extend image beyond side borders. */
-    ::slotted([slot="media"]) {
-      margin-inline: calc(-1 * var(--tt-card-border-width));
-      padding: 0;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    .tt-card__media::slotted(img) {
-      display: block;
-    }
-  `;
+  static styles = [styles];
 
   constructor() {
     super();
