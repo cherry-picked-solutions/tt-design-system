@@ -1,0 +1,101 @@
+/* src/components/snippet/snippet.css */
+:host {
+  display: block;
+  --snippet-bg: #f8fafc;
+  --snippet-color: #0f1724;
+  --snippet-border: #e6eef8;
+  --snippet-radius: 8px;
+  --snippet-padding: 12px;
+  --snippet-font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+}
+
+/* container */
+.tt-snippet {
+  background: var(--snippet-bg);
+  color: var(--snippet-color);
+  border-radius: var(--snippet-radius);
+  overflow: hidden;
+  font-family: var(--snippet-font-family);
+  border: 1px solid var(--snippet-border);
+  box-shadow: 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+/* header */
+.tt-snippet__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  border-bottom: 1px solid var(--snippet-border);
+}
+.tt-snippet__meta {
+  font-size: 12px;
+  color: rgba(15, 23, 36, 0.8);
+}
+.tt-snippet__controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.tt-snippet__copy {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  color: inherit;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.tt-snippet__copy:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+/* pre/code */
+pre {
+  margin: 0;
+  padding: var(--snippet-padding);
+  overflow: auto;
+  white-space: pre;
+  max-height: 44vh;
+  font-size: 13px;
+  line-height: 1.5;
+}
+pre.tt-snippet--wrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+code {
+  display: block;
+  color: inherit;
+  font-family: inherit;
+  white-space: inherit;
+}
+
+/* Prism token hooks (overridable) */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--snippet-comment, #6b7280);
+}
+.token.keyword {
+  color: var(--snippet-keyword, #7c3aed);
+}
+.token.string {
+  color: var(--snippet-string, #15803d);
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .tt-snippet__meta {
+    display: none;
+  }
+}
