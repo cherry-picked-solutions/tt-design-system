@@ -1,8 +1,9 @@
 import { LitElement, html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import styles from "./menu-item.css";
 
 /**
- * @tag tt-menu
+ * @tag tt-menu-item
  * @summary A menu component with horizontal and vertical options.
  *
  * @cssprop [--tt-menu-item-color=var(--link-text-color)] - The menu item colors.
@@ -25,12 +26,9 @@ export class TTMenuItem extends LitElement {
     const classes = { "tt-menu--has-submenu": this.hasSubmenu };
 
     const subnavTemplate = html`
-      <div class="tt-menu-item ${classes}">
-        <button
-          class="tt-menu__button"
-          @click=${this._toggle}
-          aria-expanded="${this.open}"
-        >
+      <div class="tt-menu-item ${classMap(classes)}">
+        // @TODO: Allow toggleable subnav's.
+        <button class="tt-menu__button" @click=${this._toggle}>
           <slot name="label"></slot>
         </button>
         <div class="tt-submenu" ?hidden=${!this.open}>
