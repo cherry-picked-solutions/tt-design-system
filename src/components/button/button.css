@@ -5,6 +5,7 @@
   --tt-button-padding-x: var(--space-sm);
   --tt-button-padding-y: var(--space-xs);
   --tt-button-radius: var(--space-xxs);
+  --tt-button-scale: 1.025;
   display: inline-flex;
   width: auto;
 }
@@ -32,9 +33,9 @@ button {
 }
 
 .tt-button--lg {
-  font-size: calc(var(--font-size-base) * 2.5%);
-  padding-block: calc(var(--tt-button-padding-y) * 2);
-  padding-inline: calc(var(--tt-button-padding-x) * 2);
+  font-size: calc(var(--font-size-base) * var(--tt-button-scale));
+  padding-block: calc(var(--tt-button-padding-y) * var(--tt-button-scale));
+  padding-inline: calc(var(--tt-button-padding-x) * var(--tt-button-scale));
 }
 
 .tt-button--sm {

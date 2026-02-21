@@ -17,6 +17,7 @@ import styles from "./button.css";
  * @cssprop [--tt-button-padding-x=var(--space-sm)] - Horizontal padding of the button.
  * @cssprop [--tt-button-padding-y=var(--space-xs)] - Vertical padding of the button.
  * @cssprop [--tt-button-radius=var(--space-xxs)] - Border radius of the button.
+ * @cssprop [--tt-button-scale=1.025] - How big the large variant should scale.
  *
  */
 
