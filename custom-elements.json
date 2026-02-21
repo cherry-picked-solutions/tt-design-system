@@ -35,6 +35,227 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/components/button/button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTButton",
+          "cssProperties": [
+            {
+              "description": "Background color of the button.",
+              "name": "--tt-button-background",
+              "default": "var(--color-neutral-darkest)"
+            },
+            {
+              "description": "Background color of the button on hover/focus.",
+              "name": "--tt-button-background-active",
+              "default": "var(--color-neutral-darker)"
+            },
+            {
+              "description": "Text color of the button.",
+              "name": "--tt-button-text",
+              "default": "var(--color-neutral-lightest)"
+            },
+            {
+              "description": "Horizontal padding of the button.",
+              "name": "--tt-button-padding-x",
+              "default": "var(--space-sm)"
+            },
+            {
+              "description": "Vertical padding of the button.",
+              "name": "--tt-button-padding-y",
+              "default": "var(--space-xs)"
+            },
+            {
+              "description": "Border radius of the button.",
+              "name": "--tt-button-radius",
+              "default": "var(--space-xxs)"
+            },
+            {
+              "description": "How big the large variant should scale.",
+              "name": "--tt-button-scale",
+              "default": "1.025"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_type",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"button\""
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "type": {
+                "text": "'reset' | 'button' | 'submit'"
+              },
+              "description": "The type of the button. Defaults to 'button'.",
+              "attribute": "type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The size of the button. Can be \"small\" or \"large\".",
+              "attribute": "size",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "'reset' | 'button' | 'submit'"
+              },
+              "description": "The type of the button. Defaults to 'button'.",
+              "name": "type",
+              "fieldName": "type"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "string"
+              },
+              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
+              "fieldName": "variant"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              },
+              "description": "The size of the button. Can be \"small\" or \"large\".",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-button",
+          "customElement": true,
+          "summary": "A custom button element."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTButton",
+          "declaration": {
+            "name": "TTButton",
+            "module": "src/components/button/button.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-button",
+          "declaration": {
+            "name": "TTButton",
+            "module": "src/components/button/button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/button.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Primary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { variant: \"primary\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Secondary",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { variant: \"secondary\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Large",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { size: \"large\", }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Small",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { size: \"small\", }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Primary",
+          "declaration": {
+            "name": "Primary",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Secondary",
+          "declaration": {
+            "name": "Secondary",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Large",
+          "declaration": {
+            "name": "Large",
+            "module": "src/components/button/button.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Small",
+          "declaration": {
+            "name": "Small",
+            "module": "src/components/button/button.stories.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/card/card.js",
       "declarations": [
         {
@@ -301,370 +522,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/button/button.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "TTButton",
-          "cssProperties": [
-            {
-              "description": "Background color of the button.",
-              "name": "--tt-button-background",
-              "default": "var(--color-neutral-darkest)"
-            },
-            {
-              "description": "Background color of the button on hover/focus.",
-              "name": "--tt-button-background-active",
-              "default": "var(--color-neutral-darker)"
-            },
-            {
-              "description": "Text color of the button.",
-              "name": "--tt-button-text",
-              "default": "var(--color-neutral-lightest)"
-            },
-            {
-              "description": "Horizontal padding of the button.",
-              "name": "--tt-button-padding-x",
-              "default": "var(--space-sm)"
-            },
-            {
-              "description": "Vertical padding of the button.",
-              "name": "--tt-button-padding-y",
-              "default": "var(--space-xs)"
-            },
-            {
-              "description": "Border radius of the button.",
-              "name": "--tt-button-radius",
-              "default": "var(--space-xxs)"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "_type",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"button\""
-            },
-            {
-              "kind": "field",
-              "name": "type",
-              "privacy": "public",
-              "type": {
-                "text": "'reset' | 'button' | 'submit'"
-              },
-              "description": "The type of the button. Defaults to 'button'.",
-              "attribute": "type",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "variant",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
-              "attribute": "variant",
-              "reflects": true
-            },
-            {
-              "kind": "field",
-              "name": "size",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "description": "The size of the button. Can be \"small\" or \"large\".",
-              "attribute": "size",
-              "reflects": true
-            }
-          ],
-          "attributes": [
-            {
-              "type": {
-                "text": "'reset' | 'button' | 'submit'"
-              },
-              "description": "The type of the button. Defaults to 'button'.",
-              "name": "type",
-              "fieldName": "type"
-            },
-            {
-              "name": "variant",
-              "type": {
-                "text": "string"
-              },
-              "description": "The visual style variant of the button. Can be \"primary\" or \"secondary\".",
-              "fieldName": "variant"
-            },
-            {
-              "name": "size",
-              "type": {
-                "text": "string"
-              },
-              "description": "The size of the button. Can be \"small\" or \"large\".",
-              "fieldName": "size"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "tt-button",
-          "customElement": true,
-          "summary": "A custom button element."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TTButton",
-          "declaration": {
-            "name": "TTButton",
-            "module": "src/components/button/button.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "tt-button",
-          "declaration": {
-            "name": "TTButton",
-            "module": "src/components/button/button.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/button/button.stories.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Primary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { variant: \"primary\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Secondary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { variant: \"secondary\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Large",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: \"large\", }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Small",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: \"small\", }, }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Primary",
-          "declaration": {
-            "name": "Primary",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Secondary",
-          "declaration": {
-            "name": "Secondary",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Large",
-          "declaration": {
-            "name": "Large",
-            "module": "src/components/button/button.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Small",
-          "declaration": {
-            "name": "Small",
-            "module": "src/components/button/button.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/header/header.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "TTHeader",
-          "cssProperties": [
-            {
-              "description": "The header background.",
-              "name": "--tt-header-background",
-              "default": "none"
-            },
-            {
-              "description": "The header's horizontal padding.",
-              "name": "--tt-header-padding-x",
-              "default": "0"
-            },
-            {
-              "description": "The header's vertical padding.",
-              "name": "--tt-header-padding-y",
-              "default": "0"
-            },
-            {
-              "description": "The spacing between columns.",
-              "name": "--tt-header-column-gap",
-              "default": "var(--space-md)"
-            },
-            {
-              "description": "The bottom border width, style, and color.",
-              "name": "--tt-header-border",
-              "default": "1px solid var(--color-neutral)"
-            }
-          ],
-          "slots": [
-            {
-              "description": "The first column.",
-              "name": "start"
-            },
-            {
-              "description": "The middle column.",
-              "name": "center"
-            },
-            {
-              "description": "The last column.",
-              "name": "end"
-            }
-          ],
-          "members": [
-            {
-              "kind": "field",
-              "name": "containerMaxWidth",
-              "privacy": "public",
-              "type": {
-                "text": "number"
-              },
-              "default": "null",
-              "description": "The header containers max width, optional.",
-              "attribute": "container-max-width"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "container-max-width",
-              "type": {
-                "text": "number"
-              },
-              "default": "null",
-              "description": "The header containers max width, optional.",
-              "fieldName": "containerMaxWidth"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "tt-header",
-          "customElement": true,
-          "summary": "A header component with three columns."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "TTHeader",
-          "declaration": {
-            "name": "TTHeader",
-            "module": "src/components/header/header.js"
-          }
-        },
-        {
-          "kind": "custom-element-definition",
-          "name": "tt-header",
-          "declaration": {
-            "name": "TTHeader",
-            "module": "src/components/header/header.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/components/header/header.stories.js",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Default",
-          "type": {
-            "text": "object"
-          },
-          "default": "{}"
-        },
-        {
-          "kind": "variable",
-          "name": "Constrained",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { containerMaxWidth: 1000, slotStart: \"<h1>Constrained width</h1>\", }, }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/components/header/header.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Default",
-          "declaration": {
-            "name": "Default",
-            "module": "src/components/header/header.stories.js"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Constrained",
-          "declaration": {
-            "name": "Constrained",
-            "module": "src/components/header/header.stories.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/menu/menu.js",
       "declarations": [
         {
@@ -863,7 +720,7 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "tt-menu",
+          "tagName": "tt-menu-item",
           "customElement": true,
           "summary": "A menu component with horizontal and vertical options."
         }
@@ -883,6 +740,154 @@
           "declaration": {
             "name": "TTMenuItem",
             "module": "src/components/menu-item/menu-item.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/header/header.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TTHeader",
+          "cssProperties": [
+            {
+              "description": "The header background.",
+              "name": "--tt-header-background",
+              "default": "none"
+            },
+            {
+              "description": "The header's horizontal padding.",
+              "name": "--tt-header-padding-x",
+              "default": "0"
+            },
+            {
+              "description": "The header's vertical padding.",
+              "name": "--tt-header-padding-y",
+              "default": "0"
+            },
+            {
+              "description": "The spacing between columns.",
+              "name": "--tt-header-column-gap",
+              "default": "var(--space-md)"
+            },
+            {
+              "description": "The bottom border width, style, and color.",
+              "name": "--tt-header-border",
+              "default": "1px solid var(--color-neutral)"
+            }
+          ],
+          "slots": [
+            {
+              "description": "The first column.",
+              "name": "start"
+            },
+            {
+              "description": "The middle column.",
+              "name": "center"
+            },
+            {
+              "description": "The last column.",
+              "name": "end"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "containerMaxWidth",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "null",
+              "description": "The header containers max width, optional.",
+              "attribute": "container-max-width"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "container-max-width",
+              "type": {
+                "text": "number"
+              },
+              "default": "null",
+              "description": "The header containers max width, optional.",
+              "fieldName": "containerMaxWidth"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "tt-header",
+          "customElement": true,
+          "summary": "A header component with three columns."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TTHeader",
+          "declaration": {
+            "name": "TTHeader",
+            "module": "src/components/header/header.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "tt-header",
+          "declaration": {
+            "name": "TTHeader",
+            "module": "src/components/header/header.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/header/header.stories.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "object"
+          },
+          "default": "{}"
+        },
+        {
+          "kind": "variable",
+          "name": "Constrained",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ args: { containerMaxWidth: 1000, slotStart: \"<h1>Constrained width</h1>\", }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/components/header/header.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/components/header/header.stories.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Constrained",
+          "declaration": {
+            "name": "Constrained",
+            "module": "src/components/header/header.stories.js"
           }
         }
       ]

@@ -1,0 +1,44 @@
+:host {
+  --tt-header-background: none;
+  --tt-header-padding-x: 0;
+  --tt-header-padding-y: 0;
+  --tt-header-column-gap: var(--space-md);
+  --tt-header-border: 1px solid var(--color-neutral);
+
+  border-bottom: var(--tt-header-border);
+  container-type: inline-size;
+  container-name: header;
+  display: block;
+}
+
+.tt-header__inner {
+  display: grid;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  gap: var(--tt-header-column-gap);
+}
+
+.tt-header {
+  background-color: var(--tt-header-background);
+  padding: var(--tt-header-padding-y) var(--tt-header-padding-x);
+}
+
+@container (min-width: 768px) {
+  .tt-header__inner {
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* @TODO: Flip this for RTL.  */
+    grid-template-areas: "start center end";
+    column-gap: var(--tt-header-column-gap);
+  }
+
+  .tt-header__center {
+    justify-self: center;
+    grid-area: center;
+  }
+
+  .tt-header__end {
+    justify-self: end;
+    grid-area: end;
+  }
+}

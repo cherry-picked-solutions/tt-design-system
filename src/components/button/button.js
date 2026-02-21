@@ -1,5 +1,6 @@
 import { classMap } from "lit/directives/class-map.js";
-import { LitElement, css, html } from "lit";
+import { LitElement, html } from "lit";
+import styles from "./button.css";
 
 /**
  * @tag tt-button
@@ -16,56 +17,12 @@ import { LitElement, css, html } from "lit";
  * @cssprop [--tt-button-padding-x=var(--space-sm)] - Horizontal padding of the button.
  * @cssprop [--tt-button-padding-y=var(--space-xs)] - Vertical padding of the button.
  * @cssprop [--tt-button-radius=var(--space-xxs)] - Border radius of the button.
+ * @cssprop [--tt-button-scale=1.025] - How big the large variant should scale.
  *
  */
 
 export class TTButton extends LitElement {
-  static styles = css`
-    :host {
-      --tt-button-background: var(--color-neutral-darkest);
-      --tt-button-background-active: var(--color-neutral-darker);
-      --tt-button-text: var(--color-neutral-lightest);
-      --tt-button-padding-x: var(--space-sm);
-      --tt-button-padding-y: var(--space-xs);
-      --tt-button-radius: var(--space-xxs);
-      display: inline-flex;
-      width: auto;
-    }
-
-    button {
-      background-color: var(--tt-button-background);
-      border: none; /* @TODO Create setting */
-      border-radius: var(--tt-button-radius);
-      color: var(--tt-button-text);
-      cursor: pointer;
-      padding-block: var(--tt-button-padding-y);
-      padding-inline: var(--tt-button-padding-x);
-
-      &:hover {
-        background-color: var(--tt-button-background-active);
-      }
-    }
-
-    .tt-button--secondary {
-      --tt-button-background: var(--color-neutral-dark);
-
-      &:is(:hover, :focus) {
-        --tt-button-background-active: var(--color-neutral);
-      }
-    }
-
-    .tt-button--lg {
-      font-size: calc(var(--font-size-base) * 2.5%);
-      padding-block: calc(var(--tt-button-padding-y) * 2);
-      padding-inline: calc(var(--tt-button-padding-x) * 2);
-    }
-
-    .tt-button--sm {
-      font-size: calc(var(--font-size-base) * 0.75);
-      padding-block: var(--tt-button-padding-y);
-      padding-inline: var(--tt-button-padding-x);
-    }
-  `;
+  static styles = [styles];
 
   static properties = {
     variant: { type: String, reflect: true },

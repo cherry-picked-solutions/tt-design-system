@@ -1,5 +1,6 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import styles from "./menu.css";
 
 /**
  * @tag tt-menu
@@ -21,40 +22,7 @@ export class TTMenu extends LitElement {
     inline: { type: Boolean, reflect: true },
   };
 
-  static styles = css`
-    :host {
-      --tt-menu-gap: var(--space-md);
-      --tt-menu-color: var(--link-text-color);
-      --tt-menu-color-active: var(--link-text-color-active);
-
-      display: block;
-    }
-
-    ul,
-    ol {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      gap: var(--tt-menu-gap);
-      padding-inline-start: 0;
-      margin-block: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-
-      &:is(:hover, :active, :focus) {
-        color: var(--tt-menu-color-active);
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .tt-menu--inline ul {
-        flex-direction: row;
-      }
-    }
-  `;
+  static styles = [styles];
 
   constructor() {
     super();
@@ -82,7 +50,7 @@ export class TTMenu extends LitElement {
 
     return html` <nav
       class="tt-menu ${classMap(classes)}"
-      inline=${this.inline}
+      ?inline=${this.inline}
     >
       <ul>
         ${this._menuItems.map(
