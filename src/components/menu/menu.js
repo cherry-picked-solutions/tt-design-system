@@ -50,7 +50,7 @@ export class TTMenu extends LitElement {
 
     return html` <nav
       class="tt-menu ${classMap(classes)}"
-      inline=${this.inline}
+      ?inline=${this.inline}
     >
       <ul>
         ${this._menuItems.map(
