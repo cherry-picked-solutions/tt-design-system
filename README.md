@@ -73,3 +73,12 @@ Some basic rules to keep in mind when styling components.
 | Extension | Description                                                                            |
 | :-------- | :------------------------------------------------------------------------------------- |
 | Peacock   | Sets custom window colors so you can easily distinguish it from other VS Code windows. |
+
+## Helpers
+
+If you're using VS Code, there are code snippets you can use to help build components and stories quicker.
+
+| Snippet | Description                | Preview                                                                        |
+| :------ | :------------------------- | ------------------------------------------------------------------------------ |
+| `lcom`  | Scaffold a lit component.  | ![Demo of component snippet](docs/_assets/vs-code-snippet-component.gif)       |
+| `story` | Scaffold a component story | ![Demo of component Storybook snippet](docs/_assets/vs-code-snippet-story.gif) |
